@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Barbara Anna Zielonka — Teachers as Technology Creators</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf6ef;--surf:#fff;--ink:#14213d;--mute:#5b6478;--acc:#e4572e;--acc2:#2a9d8f;--line:#e6dfd2;--hero:#14213d;--herotx:#faf6ef;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1424;--surf:#172038;--ink:#f1ede4;--mute:#a4adc2;--line:#2a3555;--hero:#1b2745;--herotx:#f1ede4}}
+:root[data-theme="dark"]{--bg:#0e1424;--surf:#172038;--ink:#f1ede4;--mute:#a4adc2;--line:#2a3555;--hero:#1b2745;--herotx:#f1ede4}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;margin:0}
+a{color:inherit}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;align-items:center;flex-wrap:wrap;padding:12px 5vw;background:var(--bg);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+nav .logo{font:700 18px Fraunces,Georgia,serif;margin-right:auto;text-decoration:none}
+nav a.l{padding:6px 12px;border-radius:99px;text-decoration:none;font-size:14px;font-weight:500;color:var(--mute)}
+nav a.l.on,nav a.l:hover{background:var(--ink);color:var(--bg)}
+main{max-width:1100px;margin:0 auto;padding:0 5vw 60px}
+.hero{background:var(--hero);color:var(--herotx);margin:24px -5vw 0;padding:64px 5vw;border-radius:0 0 28px 28px}
+@media(min-width:1200px){.hero{margin:24px 0 0;border-radius:28px}}
+.kick{letter-spacing:.14em;font-size:12px;font-weight:600;color:var(--acc);text-transform:uppercase}
+.hero h1{font-size:clamp(34px,6vw,64px);margin:14px 0}
+.hero h1 em{color:var(--acc);font-style:italic}
+.hero p{max-width:640px;font-size:18px;opacity:.88}
+.btn{display:inline-block;padding:12px 22px;border-radius:99px;background:var(--acc);color:#fff;text-decoration:none;font-weight:600;margin:14px 10px 0 0}
+.btn.o{background:transparent;border:1.5px solid currentColor}
+.stats{display:flex;flex-wrap:wrap;gap:28px;margin-top:36px}
+.stats b{display:block;font:700 34px Fraunces,Georgia,serif;color:var(--acc)}
+.stats span{font-size:13px;opacity:.8}
+section{margin-top:56px}
+h2.t{font-size:clamp(26px,4vw,38px);margin-bottom:8px}
+.sub{color:var(--mute);max-width:640px;margin:0 0 24px}
+.shift{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.shift div{padding:24px;border-radius:18px;border:1px solid var(--line);background:var(--surf)}
+.shift .n{background:var(--acc);color:#fff;border:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.card{display:flex;flex-direction:column;gap:8px;padding:20px;border-radius:18px;background:var(--surf);border:1px solid var(--line);text-decoration:none;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:var(--acc)}
+.card h3{font-size:19px}
+.card p{margin:0;color:var(--mute);font-size:14px;flex:1}
+.tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.04em;padding:3px 10px;border-radius:99px;background:color-mix(in srgb,var(--acc2) 18%,transparent);color:var(--acc2);margin:0 4px 0 0}
+.go{font-weight:600;font-size:14px;color:var(--acc)}
+.feat .card{border-top:4px solid var(--acc)}
+.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.cat{padding:24px;border-radius:18px;background:var(--surf);border:1px solid var(--line);text-decoration:none}
+.cat:hover{border-color:var(--acc)}
+.cat .num{font:700 30px Fraunces,Georgia,serif;color:var(--acc)}
+.cat h3{font-size:20px;margin:6px 0}
+.cat p{margin:0;color:var(--mute);font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+.chips a{padding:6px 14px;border-radius:99px;border:1px solid var(--line);text-decoration:none;font-size:13px;background:var(--surf)}
+.chips a.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.quote{font:500 clamp(22px,3.4vw,32px)/1.3 Fraunces,Georgia,serif;border-left:5px solid var(--acc);padding-left:22px;margin:0}
+.about{display:grid;grid-template-columns:1fr;gap:18px;max-width:760px}
+.about h3{font-size:24px;margin-top:20px;color:var(--acc)}
+.about p{margin:0}
+.badges{display:flex;flex-wrap:wrap;gap:10px}
+.badges span{padding:8px 14px;border-radius:12px;background:var(--surf);border:1px solid var(--line);font-size:14px;font-weight:500}
+footer{text-align:center;color:var(--mute);font-size:13px;padding:30px 5vw}
+.view{display:none}.view.on{display:block}
+@media(max-width:640px){.shift{grid-template-columns:1fr}.hero{padding:44px 5vw}}
+</style></head><body>
+<nav>
+<a class="logo" href="#home">Barbara Anna Zielonka</a>
+<a class="l" data-v="home" href="#home">Home</a>
+<a class="l" data-v="creations" href="#creations">Creations</a>
+<a class="l" data-v="about" href="#about">About</a>
+</nav>
+<main>
+
+<div class="view" id="v-home">
+<div class="hero">
+<div class="kick">Teacher-led innovation</div>
+<h1>Teachers are no longer just users of technology. They are <em>creators</em>.</h1>
+<p>With AI, any educator can build personalised learning experiences: apps, games, simulations and websites made for one particular class of students or even a single student. Here is what that looks like in practice.</p>
+<a class="btn" href="#creations">Explore 53 creations</a><a class="btn o" href="#about">Meet Barbara</a>
+
+</div>
+<section><h2 class="t">From consumer to creator</h2><p class="sub">AI changed who gets to build educational technology.</p>
+<div class="shift"><div><h3>Before</h3><p>Teachers adapted to software built by others, and made do with generic tools for every student.</p></div><div class="n"><h3>Now</h3><p>Teachers identify a classroom challenge, explore it with AI and build the solution themselves, for exactly the students in front of them.</p></div></div></section>
+<section class="feat"><h2 class="t">Featured creations</h2><p class="sub">Six highlights from more than 200 interactive learning tools I have built.</p><div class="grid" id="feat"></div></section>
+<section><h2 class="t">Seven ways to explore</h2><p class="sub">Organised by what each creation helps people learn, explore or accomplish.</p><div class="cats" id="cats"></div></section>
+<section><p class="quote">I identify challenges in education, explore possibilities with AI, and create practical solutions that help people learn, think, communicate and grow.</p></section>
+</div>
+
+<div class="view" id="v-creations">
+<section style="margin-top:36px"><h2 class="t" id="ctitle">All creations</h2><p class="sub" id="cdesc">A selection of creations from a library of more than 200 interactive resources built by Barbara.</p>
+<div class="chips" id="chips"></div><div class="grid" id="list"></div></section>
+</div>
+
+<div class="view" id="v-about">
+<section style="margin-top:36px"><div class="kick">About</div><h2 class="t" style="font-size:clamp(32px,5vw,52px)">Barbara Anna Zielonka</h2>
+<p class="sub">High school teacher in Norway, founder of AI Advisory Boards, author and lifelong learner.</p>
+<div class="badges"><span>Educator Empowerment Award 2024</span><span>Teacher Innovation finalist 2026</span><span>Author, June 2025</span><span>AI in Education, HVL</span></div>
+<div class="about">
+<h3>Exploring AI from day one</h3>
+<p>As a high school teacher in Norway with a lifelong learning mindset, I started exploring AI the moment the shift began. That same month I founded the global blog <a href="https://aiadvisoryboards.wordpress.com/" target="_blank" rel="noopener"><b>AI Advisory Boards</b></a>, where I have published over 1,600 posts on lesson plans, tool tests, AI apps, games and pedagogical reflections, for a daily community of 350 to 500 educators worldwide.</p>
+<p>This grassroots commitment to teacher empowerment was recognised when I won the <b>Educator Empowerment Award</b> at the AI for Education Awards in 2024, and later became a finalist for the <b>Teacher Innovation Award</b> at the 2026 awards.</p>
+<h3>Sharing and teaching</h3>
+<p>I share my expertise, reflections and practical ideas about AI in education on LinkedIn and X, contributing to international conversations about how AI can transform teaching and learning. I also run workshops for fellow educators, helping teachers discover practical applications and recognise their own capacity to become creators and innovators rather than simply consumers of educational technology.</p>
+<h3>Rooted in student collaboration</h3>
+<p>My work is built with students. In 2023 and 2024 I established student-led AI advisory boards at my school, creating open frameworks that other schools can replicate. I am currently pursuing formal studies in AI in Education at the Western Norway University of Applied Sciences (HVL).</p>
+<h3>Learning to build through vibecoding</h3>
+<p>Over the past 15 months I have taught myself to build interactive apps, simulations and games through <b>vibecoding</b>: describing what I want to create, working with AI to build it, and refining it through testing. I am a fluent user of <b>Google AI Studio</b>, <b>Lovable</b>, <b>GitHub</b>, <b>Cloudflare</b> and <b>Netlify</b>, which lets me take an idea from a classroom challenge to a live, shareable tool. In that time I have built more than 200 apps, simulations and games, and this site showcases a selection of them. Every creation on this site was made this way, and it is the clearest proof of my belief that teachers can be creators of technology, not just consumers.</p>
+<h3>The book</h3>
+<p>In June 2025 I published <a href="https://www.amazon.com/Embracing-AI-Education-Journey-Educators-ebook/dp/B0FCSLLV8N?ref_=ast_author_mpb" target="_blank" rel="noopener"><b>Embracing AI in Education: My Journey and Lessons for Educators</b></a>. It shares real-world experience of integrating AI into teaching, explores how AI can enhance student engagement and agency, and highlights uniquely human skills: critical thinking, creativity, emotional intelligence, resilience, adaptability and ethical judgement. I argue for rethinking the educator’s role so that technology strengthens, rather than replaces, the human dimension of education.</p>
+<p><a class="btn" href="https://www.amazon.com/Embracing-AI-Education-Journey-Educators-ebook/dp/B0FCSLLV8N?ref_=ast_author_mpb" target="_blank" rel="noopener" style="margin-left:0">Get the book</a><a class="btn o" href="https://aiadvisoryboards.wordpress.com/" target="_blank" rel="noopener">Read the blog</a><a class="btn o" href="#creations">See what I have built</a></p>
+</div></section>
+</div>
+</main>
+<footer>Teacher-led innovation · Barbara Anna Zielonka · <a href="https://aiadvisoryboards.wordpress.com/" target="_blank" rel="noopener">AI Advisory Boards blog</a> · <a href="https://www.amazon.com/Embracing-AI-Education-Journey-Educators-ebook/dp/B0FCSLLV8N?ref_=ast_author_mpb" target="_blank" rel="noopener">The book</a></footer>
+<script>
+const G="https://barbaraannazielonka-commits.github.io/",W=n=>"https://"+n+".barbaraz.workers.dev/";
+const C={
+ai:["AI Literacy & the Future of Education","Understanding AI, developing AI competence and navigating the changing educational landscape."],
+human:["Human Intelligence, Learning & Wellbeing","Developing human capabilities, cognitive skills, attention, learning strategies and wellbeing."],
+language:["Language Learning & Communication","Interactive language games, vocabulary challenges, communication and presentation skills."],
+vocational:["Vocational Learning & Career Exploration","Connecting classroom learning with professions, workplace situations and vocational English."],
+simulations:["Simulations & Real-World Challenges","Immersive experiences where learners make decisions, solve problems and explore realistic situations."],
+educators:["Tools for Educators & School Innovation","Practical applications supporting teachers, school development and professional collaboration."],
+society:["Digital Citizenship, Critical Thinking & Society","Exploring contemporary issues, digital culture, responsible choices and critical perspectives."]};
+const K=Object.keys(C);
+const P=[
+["AI Fluency Compass","ai",G+"AIFluencyCompasslb/"],
+["The AI Compass 3.0","ai",G+"KI-Kompasset3.0/","educators"],
+["Periodic Table of AI Agents","ai",G+"AIAgentsK12/"],
+["AI Literacy Workbook","ai",G+"ailiteracyframework/"],
+["Challenges of AI in Language Education","ai",G+"ChallengesofAIinLanguageEducation/"],
+["Teaching Attribution in the Age of AI","ai",G+"Teaching-Attribution-in-the-Age-of-AI/"],
+["AI in the Writing Classroom: A Guide to Transparent and Ethical AI Use","ai",G+"AGuidetoTransparentEthicalAIUse/","educators"],
+["Signpost: Learn to Steer AI (Prompting Guide)","ai",G+"steeringAI/"],
+["The Citation Lab","ai",G+"thecitationlab/"],
+["Use AI to Get Smarter, Not Just Faster","ai",G+"useaitogetsmarter/"],
+["AI Project Portfolio","ai",G+"AIprojectportfolio/"],
+["Human Skills","human",G+"humanskills/"],
+["Human Intelligence Labs at Schools","human",G+"humanintelligencelabs/","educators"],
+["Cognitive Learning Designer App","human",G+"cognitivelearningdesign/","educators"],
+["Effective Learning Strategies","human",G+"effectivelearningstrategies/"],
+["Attention Lab","human",G+"attentionlab/"],
+["Neuronutrition","human",G+"neuronutrition/"],
+["Screen Time Swap","human",G+"screentimeswap/"],
+["The Mindset Terrain","human",G+"mindsetvocabulary/"],
+["Homophone Expedition","language",W("homophoneexpedition")],
+["The Oral Presentation Quest","language",W("theoralpresentationquest")],
+["Oral Presentation Formats","language",G+"oralpresentationformats/"],
+["The English Varieties Trail","language",G+"varietiesofenglishtrail/"],
+["Formal vs Informal Language","language",G+"formalandinformallanguage/"],
+["Language Register & Code-Switching","language",W("registerandcodeswitching")],
+["Word Search RM","language",G+"wordsearchRM/"],
+["Odd One Out","language",G+"oddoneoutRM/"],
+["Word Scramble","language",G+"wordscrambleRM/"],
+["Health Issues: Vocabulary Practice","language",G+"healthissuescheckup/"],
+["Discover Your Future Career in ICT & Media Design","vocational","https://ictmediacareerapp.ai.studio/"],
+["RM Career Navigator","vocational","https://bazcareernavigator.ai.studio/"],
+["RM Careers: Find Your Profession","vocational",G+"RMcareers/"],
+["English for Tech & Media Careers","vocational",G+"tech-mediacareers/"],
+["Workday: IT & Media Design","vocational",G+"Workday-IT-Media-Design/"],
+["Kitchen Tools","vocational",G+"kitchentools/"],
+["Kitchen Safety","vocational",G+"kitchensafety/"],
+["Green Kitchen Words","vocational",G+"greenkitchenwords/"],
+["Pixels to Policy: The European Video Game Industry","vocational",G+"videogameindustryineurope/"],
+["CV Workshop","vocational",G+"CVwriting/"],
+["Personal & Food Hygiene: Lesson for Future Chefs & Waiters","vocational",G+"personalandfoodhygiene/"],
+["Tug of War: CV & Job Interview Challenge","vocational","https://tug-of-war--cv-and-job-interview.barbaraz.workers.dev/"],
+["Who Would You Hire?","simulations",G+"jobinterviewsRM/"],
+["Run a Food Truck: Food Truck English Challenge","simulations",G+"foodtrucksimulations/"],
+["Healthcare Simulation: Fjordglimt Care Centre","simulations",G+"FJORDGLIMT-CARE-CENTRE/"],
+["CareSpeak: Clinical English Simulation Lab","simulations",W("carespeak")],
+["Ctrl+Alt+Resolve","simulations",W("ctrl-alt-resolve")],
+["Staffroom: Find a Meeting Time That Works for Teachers","educators","https://teacher-meeting-scheduler-baz.netlify.app/"],
+["Interactive Learning Design Foresight Taxonomy","educators","https://interactive-learning-design-foresight-taxonomy.barbaraz.workers.dev/"],
+["Decode the Manosphere","society",G+"manosphere/"],
+["The Pause Before the Click","society",G+"ThePauseBeforetheClick/"],
+["AI Backlash Is Getting Louder","society",G+"AIbacklashisgettinglouder/"],
+["Analog Revolution","society",G+"analogrevolution/"],
+["RM No Whammies","society",G+"RMnowhammies/"]];
+const F=[
+["AI Fluency Compass","A tool for educators to explore and assess their AI fluency."],
+["Healthcare Simulation: Fjordglimt Care Centre","A vocational healthcare simulation built around realistic care scenarios."],
+["Homophone Expedition","A language adventure where learners explore words that sound alike but mean different things."],
+["The Oral Presentation Quest","Turning presentation practice into an interactive learning journey."],
+["Periodic Table of AI Agents","A visual exploration of AI agents in education."],
+["Run a Food Truck: Food Truck English Challenge","Learning English through a practical business challenge."]];
+const $=s=>document.querySelector(s);
+const card=(p,d)=>`<a class="card" href="${p[2]}" target="_blank" rel="noopener"><div><span class="tag">${C[p[1]][0].split(" &")[0].split(",")[0]}</span></div><h3>${p[0]}</h3>${d?`<p>${d}</p>`:'<p></p>'}<span class="go">Explore project →</span></a>`;
+$("#feat").innerHTML=F.map(f=>card(P.find(p=>p[0]==f[0]),f[1])).join("");
+$("#cats").innerHTML=K.map((k,i)=>`<a class="cat" href="#${k}"><div class="num">0${i+1}</div><h3>${C[k][0]}</h3><p>${C[k][1]}</p></a>`).join("");
+$("#chips").innerHTML=`<a href="#creations" data-c="all">All 53</a>`+K.map(k=>`<a href="#${k}" data-c="${k}">${C[k][0].split(" &")[0].split(",")[0]}</a>`).join("");
+function route(){
+let h=cur||"home",v=h,c="all";
+if(K.includes(h)){v="creations";c=h}else if(!["home","about","creations"].includes(h))v="home";
+document.querySelectorAll(".view").forEach(e=>e.classList.toggle("on",e.id=="v-"+v));
+document.querySelectorAll("nav a.l").forEach(a=>a.classList.toggle("on",a.dataset.v==v));
+if(v=="creations"){
+document.querySelectorAll("#chips a").forEach(a=>a.classList.toggle("on",a.dataset.c==c));
+const l=c=="all"?P:P.filter(p=>p[1]==c||p[3]==c);
+if(c=="educators"){const o=["Staffroom","The AI Compass","Cognitive","Human Intelligence","Interactive Learning","AI in the Writing"];l.sort((a,b)=>o.findIndex(x=>a[0].startsWith(x))-o.findIndex(x=>b[0].startsWith(x)))}
+$("#ctitle").textContent=c=="all"?"All creations":C[c][0];
+$("#cdesc").textContent=c=="all"?"A selection of "+P.length+" creations from a library of more than 200 interactive resources built by Barbara.":C[c][1];
+$("#list").innerHTML=l.map(p=>card(p)).join("");}
+scrollTo(0,0);}
+let cur=location.hash.slice(1);
+addEventListener("hashchange",()=>{cur=location.hash.slice(1);route()});
+document.addEventListener("click",e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;e.preventDefault();cur=a.getAttribute("href").slice(1);try{history.replaceState(null,"","#"+cur)}catch(_){}route()});
+route();
+</script></body></html>
