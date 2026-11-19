@@ -82,7 +82,7 @@ footer{text-align:center;color:var(--mute);font-size:13px;padding:30px 5vw}
 <div class="kick">Teacher-led innovation</div>
 <h1>Teachers are no longer just users of technology. They are <em>creators</em>.</h1>
 <p>With AI, any educator can build personalised learning experiences: apps, games, simulations and websites made for one particular class of students or even a single student. Here is what that looks like in practice.</p>
-<a class="btn" href="#creations">Explore 57 creations</a><a class="btn o" href="#about">Meet Barbara</a>
+<a class="btn" href="#creations">Explore 62 creations</a><a class="btn o" href="#about">Meet Barbara</a>
 
 </div>
 <section><h2 class="t">From consumer to creator</h2><p class="sub">AI changed who gets to build educational technology.</p>
@@ -194,6 +194,7 @@ const P=[
 ["Teaching Attribution in the Age of AI","ai",G+"Teaching-Attribution-in-the-Age-of-AI/"],
 ["AI in the Writing Classroom: A Guide to Transparent and Ethical AI Use","ai",G+"AGuidetoTransparentEthicalAIUse/","educators"],
 ["Signpost: Learn to Steer AI (Prompting Guide)","ai",G+"steeringAI/"],
+["PromptLab: AI Prompts for High School English","ai",G+"PromptLabEnglish/"],
 ["The Citation Lab","ai",G+"thecitationlab/"],
 ["Use AI to Get Smarter, Not Just Faster","ai",G+"useaitogetsmarter/"],
 ["AI Project Portfolio","ai",G+"AIprojectportfolio/"],
@@ -216,6 +217,7 @@ const P=[
 ["Word Scramble","language",G+"wordscrambleRM/"],
 ["Health Issues: Vocabulary Practice","language",G+"healthissuescheckup/"],
 ["Subject-Verb Agreement Lab","language",G+"subjectverbagreement/"],
+["Pause, Comma: Commas after Introductory Phrases","language",G+"commasafterintroductoryphrases/"],
 ["Discover Your Future Career in ICT & Media Design","vocational","https://ictmediacareerapp.ai.studio/"],
 ["RM Career Navigator","vocational","https://bazcareernavigator.ai.studio/"],
 ["RM Careers: Find Your Profession","vocational",G+"RMcareers/"],
@@ -227,6 +229,8 @@ const P=[
 ["Pixels to Policy: The European Video Game Industry","vocational",G+"videogameindustryineurope/"],
 ["CV Workshop","vocational",G+"CVwriting/"],
 ["Restaurant Video & English Vocabulary Studio","vocational",W("formaldining")],
+["Maison Masala: Restaurant English","vocational",G+"maisonmasala/"],
+["The Film Table: The Hundred-Foot Journey","vocational",G+"thehundredfootjourneyA1/"],
 ["Personal & Food Hygiene: Lesson for Future Chefs & Waiters","vocational",G+"personalandfoodhygiene/"],
 ["Tug of War: CV & Job Interview Challenge","vocational","https://tug-of-war--cv-and-job-interview.barbaraz.workers.dev/"],
 ["Who Would You Hire?","simulations",G+"jobinterviewsRM/"],
@@ -242,7 +246,8 @@ const P=[
 ["The Pause Before the Click","society",G+"ThePauseBeforetheClick/"],
 ["AI Backlash Is Getting Louder","society",G+"AIbacklashisgettinglouder/"],
 ["Analog Revolution","society",G+"analogrevolution/"],
-["RM No Whammies","society",G+"RMnowhammies/"]];
+["RM No Whammies","society",G+"RMnowhammies/"],
+["Future Signals: A Foresight Lab","society",G+"futuresignalsforesight/"]];
 const F=[
 ["AI Fluency Compass","A tool for educators to explore and assess their AI fluency."],
 ["Healthcare Simulation: Fjordglimt Care Centre","A vocational healthcare simulation built around realistic care scenarios."],
@@ -254,7 +259,7 @@ const $=s=>document.querySelector(s);
 const card=(p,d)=>`<a class="card" href="${p[2]}" target="_blank" rel="noopener"><div><span class="tag">${C[p[1]][0].split(" &")[0].split(",")[0]}</span></div><h3>${p[0]}</h3>${d?`<p>${d}</p>`:'<p></p>'}<span class="go">Explore project →</span></a>`;
 $("#feat").innerHTML=F.map(f=>card(P.find(p=>p[0]==f[0]),f[1])).join("");
 $("#cats").innerHTML=K.map((k,i)=>`<a class="cat" href="#${k}"><div class="num">0${i+1}</div><h3>${C[k][0]}</h3><p>${C[k][1]}</p></a>`).join("");
-$("#chips").innerHTML=`<a href="#creations" data-c="all">All 57</a>`+K.map(k=>`<a href="#${k}" data-c="${k}">${C[k][0].split(" &")[0].split(",")[0]}</a>`).join("");
+$("#chips").innerHTML=`<a href="#creations" data-c="all">All 62</a>`+K.map(k=>`<a href="#${k}" data-c="${k}">${C[k][0].split(" &")[0].split(",")[0]}</a>`).join("");
 function route(){
 let h=cur||"home",v=h,c="all";
 if(K.includes(h)){v="creations";c=h}else if(!["home","about","creations","pedagogy","responsibly"].includes(h))v="home";
